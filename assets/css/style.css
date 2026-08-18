@@ -148,16 +148,17 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); margin-bottom: 1.1rem; }
   padding: 1.35rem 0;
 }
 
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+.logo { display: block; }
+
+.logo img {
+  height: 34px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
+  transition: opacity 0.4s;
 }
 
-.logo span { color: var(--ink-muted); transition: color 0.4s; }
-.logo:hover span { color: var(--ink); }
+.logo:hover img { opacity: 1; }
 
 .nav-links {
   display: flex;
@@ -195,15 +196,20 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); margin-bottom: 1.1rem; }
 .nav-links a.active:not(.nav-cta)::after { transform: scaleX(1); transform-origin: left; }
 
 .nav-cta {
-  color: var(--bg) !important;
-  background: var(--paper);
-  padding: 0.65rem 1.5rem;
-  overflow: hidden;
-  position: relative;
-  transition: color 0.35s;
+  color: var(--ink) !important;
+  border: 1px solid rgba(236, 233, 226, 0.3);
+  padding: 0.6rem 1.45rem;
+  background: linear-gradient(to right, var(--paper) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.55s var(--ease-out), color 0.4s, border-color 0.4s;
 }
 
-.nav-cta:hover { background: #ffffff; }
+.nav-cta:hover {
+  color: var(--bg) !important;
+  border-color: var(--paper);
+  background-position: 0 0;
+}
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.4rem; }
 .nav-toggle span { display: block; width: 26px; height: 1.5px; background: var(--ink); margin: 6px 0; }
@@ -878,8 +884,15 @@ section { padding: 7.5rem 0; }
 
 .site-footer {
   border-top: 1px solid var(--hairline-soft);
-  padding: 3rem 0 2.5rem;
+  padding: 3.5rem 0 2.5rem;
   margin-top: 3rem;
+}
+
+.footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 2.2rem;
+  opacity: 0.85;
 }
 
 .footer-inner {
