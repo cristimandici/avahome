@@ -680,3 +680,80 @@ h2 {
 @media (max-width: 640px) {
   .video-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------------- Room sections (model pages) ---------------- */
+
+.intro-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.room { margin-bottom: 4.5rem; }
+.room:last-child { margin-bottom: 0; }
+
+.room-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.room-grid.flip > .room-media { order: 2; }
+
+.room-media { display: grid; gap: 1.2rem; }
+
+.room-media img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.room-media.pair { grid-template-columns: 1fr 1fr; }
+
+.room-media img.tall { aspect-ratio: 3 / 4; }
+
+.room-copy h3 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.9rem;
+}
+
+.room-copy p { color: var(--ink-soft); margin-bottom: 1rem; }
+
+/* ---------------- Brand statement ---------------- */
+
+.statement {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.statement p {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.statement p span { color: var(--ink-soft); }
+
+@media (max-width: 900px) {
+  .intro-cols, .room-grid { grid-template-columns: 1fr; }
+  .room-grid.flip > .room-media { order: 0; }
+}
+
+@media (max-width: 640px) {
+  .room-media.pair { grid-template-columns: 1fr; }
+}
