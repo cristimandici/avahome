@@ -56,7 +56,11 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 html, body { overflow-x: clip; }
 
@@ -276,13 +280,14 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); margin-bottom: 1.1rem; }
 
 .hero-full {
   position: relative;
+  min-height: 100vh;
   min-height: 100svh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
 }
 
-.hero-full.short { min-height: 88svh; }
+.hero-full.short { min-height: 88vh; min-height: 88svh; }
 
 .hero-bg {
   position: absolute;
@@ -312,7 +317,7 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); margin-bottom: 1.1rem; }
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 8.5rem 0 7.5rem;
+  padding: calc(8.5rem + env(safe-area-inset-top, 0px)) 0 7.5rem;
 }
 
 .hero-content .sec-label { color: var(--ink); opacity: 0.85; }
@@ -1027,7 +1032,10 @@ section { padding: 7.5rem 0; }
   .video-grid, .room-media.pair, .room-media > .pair { grid-template-columns: 1fr; }
   .step { border-left: none; padding: 0; }
   section { padding: 4.5rem 0; }
-  .hero-content { padding-bottom: 5.5rem; }
+  .hero-content { padding-bottom: 5rem; }
+  h1 { font-size: clamp(2.5rem, 11vw, 3.2rem); }
+  .hero-content .lead { font-size: 0.98rem; margin-bottom: 2rem; }
+  .btn-row { gap: 1.4rem; }
   .cta-banner { padding: 3.5rem 1.5rem; }
   .card-overlay { left: 1.3rem; right: 1.3rem; bottom: 1.3rem; }
   .card-specs { gap: 1.2rem; }
