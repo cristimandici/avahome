@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AvaHome — Modular Homes: Movable Cottage &amp; House Boat</title>
   <meta name="description" content="AvaHome builds premium modular homes: the Movable Cottage with a mirror facade that melts into the landscape, and the modular floating House Boat. Factory-built, delivered turnkey.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏡</text></svg>">
 </head>
@@ -32,64 +29,72 @@
 <main>
 
   <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Premium modular homes</span>
-        <h1>Premium movable homes with a modern aesthetic design</h1>
-        <p class="lead">
-          AvaHome designs and builds modular homes with contemporary architecture:
-          the <strong>Movable Cottage</strong>, wrapped in a mirror facade that melts
-          into the landscape, and the <strong>House Boat</strong>, a floating home
-          that brings living onto the water. Factory-built and delivered turnkey.
-        </p>
-        <div class="btn-row">
-          <a href="#models" class="btn btn-primary">Explore the models</a>
-          <a href="#contact" class="btn btn-ghost">Contact us</a>
-        </div>
-      </div>
-      <div class="hero-art reveal">
-        <img src="assets/img/mirror/exterior-front.jpg" alt="Movable Cottage — the mirror facade reflecting sky and mountain scenery">
+  <section class="hero-full">
+    <div class="hero-bg">
+      <img src="assets/img/mirror/exterior-sunset.jpg" style="object-position: 72% 50%;" alt="Movable Cottage at sunset — the mirror facade glowing above the valley">
+    </div>
+    <div class="hero-content container">
+      <span class="sec-label">Premium modular homes</span>
+      <h1>Premium movable homes with a modern aesthetic design</h1>
+      <p class="lead">
+        AvaHome designs and builds modular homes with contemporary architecture:
+        the Movable Cottage, wrapped in a mirror facade that melts into the landscape,
+        and the House Boat, a floating home that brings living onto the water.
+      </p>
+      <div class="btn-row">
+        <a href="#models" class="btn btn-primary">Explore the models</a>
+        <a href="#contact" class="btn btn-ghost">Contact us</a>
       </div>
     </div>
+    <div class="scroll-hint" aria-hidden="true"></div>
   </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Movable Cottage</span><span>House Boat</span><span>Movable Cottage</span><span>House Boat</span>
+      <span>Movable Cottage</span><span>House Boat</span><span>Movable Cottage</span><span>House Boat</span>
+    </div>
+  </div>
 
   <!-- ================= MODELS ================= -->
   <section id="models">
     <div class="container">
       <div class="section-head">
+        <span class="sec-label">01 — The models</span>
         <h2>Two models. Two ways to live.</h2>
         <p>Both built modular: precision-made in our workshop, then transported and installed on your site.</p>
       </div>
       <div class="models-grid">
         <article class="model-card reveal">
-          <div class="card-art">
-            <img src="assets/img/mirror/exterior-sunset.jpg" style="object-position: 78% 50%;" alt="Movable Cottage at sunset, above the valley">
-          </div>
-          <div class="card-body">
+          <a href="movable-cottage.html" class="card-art" aria-label="Movable Cottage">
+            <img src="assets/img/mirror/exterior-front.jpg" alt="Movable Cottage — the mirror facade reflecting clouds and hills">
+          </a>
+          <div class="card-overlay">
+            <span class="index">01</span>
             <h3>Movable Cottage</h3>
-            <p>A mirror-clad cottage that reflects its surroundings until it almost disappears. Warm, minimalist interior with generous glazing — and it moves with you.</p>
+            <p>A mirror-clad cottage that reflects its surroundings until it almost disappears — and it moves with you.</p>
             <div class="card-specs">
               <div class="spec"><strong>Modular</strong>construction</div>
               <div class="spec"><strong>Turnkey</strong>delivery</div>
               <div class="spec"><strong>4-season</strong>insulation</div>
             </div>
-            <a href="movable-cottage.html" class="card-link">View details →</a>
+            <a href="movable-cottage.html" class="card-link">View details</a>
           </div>
         </article>
         <article class="model-card reveal">
-          <div class="card-art">
+          <a href="house-boat.html" class="card-art" aria-label="House Boat">
             <img src="assets/img/boat/exterior-main.jpg" alt="House Boat — modular floating home on the water">
-          </div>
-          <div class="card-body">
+          </a>
+          <div class="card-overlay">
+            <span class="index">02</span>
             <h3>House Boat</h3>
-            <p>A floating home on a pontoon structure, built modular. Live on a lake or river delta, with a deck above the water and no neighbours in sight.</p>
+            <p>A floating home on a pontoon structure, built modular — a deck above the water and no neighbours in sight.</p>
             <div class="card-specs">
               <div class="spec"><strong>Modular</strong>construction</div>
               <div class="spec"><strong>Floating</strong>pontoon base</div>
               <div class="spec"><strong>Movable</strong>relocatable</div>
             </div>
-            <a href="house-boat.html" class="card-link">View details →</a>
+            <a href="house-boat.html" class="card-link">View details</a>
           </div>
         </article>
       </div>
@@ -109,6 +114,7 @@
   <section id="benefits">
     <div class="container">
       <div class="section-head">
+        <span class="sec-label">02 — Why modular</span>
         <h2>Why an AvaHome modular home?</h2>
         <p>Modular construction removes the uncertainty of a traditional building site.</p>
       </div>
@@ -164,6 +170,7 @@
     <div class="container">
       <div class="process reveal">
         <div class="section-head">
+          <span class="sec-label">03 — The process</span>
           <h2>How it works</h2>
           <p>From the first conversation to handing over the keys.</p>
         </div>
@@ -204,6 +211,7 @@
   <section id="contact">
     <div class="container">
       <div class="section-head">
+        <span class="sec-label">04 — Contact</span>
         <h2>Contact us</h2>
         <p>We reply within 24 business hours.</p>
       </div>

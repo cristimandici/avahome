@@ -1,5 +1,13 @@
 // AvaHome — interacțiuni de bază
 
+// Header: solid after scrolling past the hero start
+const siteHeader = document.querySelector('.site-header');
+if (siteHeader) {
+  const onScroll = () => siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 // Meniu mobil
 const toggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
