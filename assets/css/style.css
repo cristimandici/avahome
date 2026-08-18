@@ -571,3 +571,67 @@ h2 {
   .cta-banner, .process { padding: 2.2rem 1.6rem; }
   .card-specs { flex-wrap: wrap; }
 }
+
+/* ---------------- Gallery photos & lightbox ---------------- */
+
+.gallery-grid > div > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-lightbox img { cursor: zoom-in; transition: opacity 0.2s; }
+.gallery-lightbox img:hover { opacity: 0.92; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(20, 25, 27, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 1rem 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.lightbox.open { opacity: 1; pointer-events: auto; }
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: grid;
+  place-items: center;
+}
+
+.lightbox button:hover { background: rgba(255, 255, 255, 0.25); }
+
+.lightbox .lb-close { top: 1rem; right: 1rem; }
+.lightbox .lb-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+.lightbox .lb-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+
+/* Uniformizează proporțiile imaginilor hero și ale cardurilor */
+.hero-art img,
+.card-art img {
+  width: 100%;
+  aspect-ratio: 10 / 7;
+  object-fit: cover;
+}
