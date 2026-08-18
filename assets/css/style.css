@@ -62,7 +62,7 @@ html {
   text-size-adjust: 100%;
 }
 
-html, body { overflow-x: clip; }
+html { overflow-x: clip; }
 
 body {
   font-family: var(--font-body);
@@ -1005,6 +1005,10 @@ section { padding: 7.5rem 0; }
   .process-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem 0; }
   .process-steps .step:nth-child(3) { border-left: none; padding-left: 0; }
   .models-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  body::after { display: none; }
 }
 
 @media (max-width: 640px) {
