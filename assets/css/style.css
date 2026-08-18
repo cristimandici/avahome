@@ -58,6 +58,8 @@
 
 html { scroll-behavior: smooth; }
 
+html, body { overflow-x: clip; }
+
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -65,7 +67,6 @@ body {
   line-height: 1.7;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
 /* film grain */
@@ -131,13 +132,13 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); margin-bottom: 1.1rem; }
   left: 0;
   right: 0;
   z-index: 90;
+  padding-top: env(safe-area-inset-top, 0);
   transition: background 0.5s, border-color 0.5s, backdrop-filter 0.5s;
   border-bottom: 1px solid transparent;
 }
 
 .site-header.scrolled {
-  background: rgba(11, 11, 12, 0.82);
-  backdrop-filter: blur(14px);
+  background: #0b0b0c;
   border-bottom-color: var(--hairline-soft);
 }
 
@@ -311,7 +312,7 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); margin-bottom: 1.1rem; }
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 0 7.5rem;
+  padding: 8.5rem 0 7.5rem;
 }
 
 .hero-content .sec-label { color: var(--ink); opacity: 0.85; }
