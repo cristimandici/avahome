@@ -43,7 +43,7 @@ if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Mulțumim! Te contactăm în curând.';
+    btn.textContent = 'Thank you! We will be in touch soon.';
     btn.disabled = true;
     form.reset();
   });
@@ -56,9 +56,9 @@ if (galleryImgs.length) {
   const lb = document.createElement('div');
   lb.className = 'lightbox';
   lb.innerHTML =
-    '<button class="lb-close" aria-label="Închide">&times;</button>' +
-    '<button class="lb-prev" aria-label="Imaginea anterioară">&#8249;</button>' +
-    '<button class="lb-next" aria-label="Imaginea următoare">&#8250;</button>' +
+    '<button class="lb-close" aria-label="Close">&times;</button>' +
+    '<button class="lb-prev" aria-label="Previous image">&#8249;</button>' +
+    '<button class="lb-next" aria-label="Next image">&#8250;</button>' +
     '<img alt="">';
   document.body.appendChild(lb);
 

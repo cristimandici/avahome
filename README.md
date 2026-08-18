@@ -1,39 +1,38 @@
-# AvaHome — site de prezentare
+# AvaHome — presentation website
 
-Site static de prezentare pentru casele modulare AvaHome:
+Static presentation site for AvaHome premium modular homes:
 
-- **House Mirror** — casă modulară cu fațadă oglindă, integrată în peisaj
-- **House Boat** — casă plutitoare modulară pe structură de ponton
+- **Movable Cottage** — mirror-facade modular home that melts into the landscape
+- **House Boat** — modular floating home on a pontoon structure
 
-## Structură
+## Structure
 
 ```
-index.html          — pagina principală (modele, avantaje, proces, contact)
-house-mirror.html   — pagina modelului House Mirror
-house-boat.html     — pagina modelului House Boat
-assets/css/style.css
-assets/js/main.js
-assets/img/         — ilustrații (de înlocuit cu fotografii reale)
+index.html            — homepage (models, benefits, process, contact)
+movable-cottage.html  — Movable Cottage model page (photos, videos, renders)
+house-boat.html       — House Boat model page (renders)
+assets/css/style.css  — premium dark monochrome theme
+assets/js/main.js     — nav, reveal animations, gallery lightbox
+assets/img/           — optimized photography and renders
+assets/video/         — real footage tours
 ```
 
-## Rulare locală
+## Run locally
 
-Nu necesită build — deschide `index.html` în browser sau rulează:
+No build step — open `index.html` in a browser, or run:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-apoi accesează http://localhost:8000.
+then visit http://localhost:8000.
 
-## Publicare
+## Publishing
 
-Fiind un site static, poate fi publicat direct pe GitHub Pages, Netlify,
-Vercel sau orice hosting web.
+Being fully static, the site deploys directly to GitHub Pages, Netlify,
+Vercel or any web host.
 
-## De înlocuit când există materiale reale
+## Still to fill in
 
-- Ilustrațiile SVG din `assets/img/` cu fotografii/randări reale
-- Placeholder-ele din galeriile de pe paginile de model
-- Datele de contact (telefon, email) din `index.html`
-- Specificațiile exacte (suprafețe, prețuri) din tabelele de pe paginile de model
+- Real contact details (phone, email) in `index.html`
+- Exact specifications and pricing in the model spec tables
